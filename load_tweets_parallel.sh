@@ -19,4 +19,4 @@ echo '==========================================================================
 echo 'load pg_normalized_batch'
 echo '================================================================================'
 # FIXME: implement this with GNU parallel
-# time parallel 'python3 -u load_tweets_batch.py --db=postgresql://postgres:pass@localhost:10653/ --inputs {}' ::: data/*
+time parallel 'python3 -u load_tweets_batch.py --db=postgresql://postgres:pass@localhost:10653/ --inputs {}' ::: data/*
